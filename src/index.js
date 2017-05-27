@@ -1,4 +1,11 @@
-let square = (x) => {
-  return x * x;
-};
-console.log(square(19));
+const RollingSpider = require("rolling-spider");
+
+const rollingSpider = new RollingSpider({
+		uuid: ''
+});
+
+rollingSpider.connect(() => {
+		rollingSpider.setup(() => {
+				rollingSpider.startPing();
+		});
+});
