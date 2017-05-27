@@ -1,11 +1,4 @@
-const RollingSpider = require("rolling-spider");
+var arDrone = require('ar-drone');
+var client  = arDrone.createClient();
 
-const rollingSpider = new RollingSpider({
-		uuid: ''
-});
-
-rollingSpider.connect(() => {
-		rollingSpider.setup(() => {
-				rollingSpider.startPing();
-		});
-});
+client.createRepl();
